@@ -2,7 +2,7 @@
 # uDRAE-sdk
 Con uDRAE-sdk podrás acceder fácilmente a la API del DRAE.
 
-# Tabla de contenidos
+# Tabla de contenidos (en progreso)
 1. [Qué es y para qué sirve uDRAE-sdk](https://github.com/GrenderG/uDRAE-sdk#qué-es-y-para-qué-sirve-udrae-sdk)
 2. [Llamadas a la API y modelos de respuestas](https://github.com/GrenderG/uDRAE-sdk#llamadas-a-la-api-y-modelos-de-respuestas)
     1. [Anagrama](https://github.com/GrenderG/uDRAE-sdk#anagrama)
