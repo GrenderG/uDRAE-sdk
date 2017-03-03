@@ -1,3 +1,4 @@
+[![](https://jitpack.io/v/GrenderG/uDRAE-sdk.svg)](https://jitpack.io/#GrenderG/uDRAE-sdk)
 # uDRAE-sdk
 Con uDRAE-sdk podrás acceder fácilmente a la API del DRAE.
 
@@ -67,8 +68,26 @@ Con uDRAE-sdk podrás acceder fácilmente a la API del DRAE.
 # Cómo usar uDRAE-SDK
 
 ### Añadiendo repositorio de jitpack
+Añade lo siguiente al `build.gradle` ubicado en la raíz, **no** el del módulo.
+
+```gradle
+allprojects {
+	repositories {
+		...
+		maven { url "https://jitpack.io" }
+	}
+}
+```
 
 ### Añadiendo dependencia mediante gradle
+Añade lo siguiente al `build.gradle` de tu módulo. (Asegúrate de que la versión sea la misma que la del distintivo de arriba)
+
+```gradle
+dependencies {
+	...
+	compile 'com.github.GrenderG:uDRAE-sdk:1.0.0'
+}
+```
 
 ---
 
