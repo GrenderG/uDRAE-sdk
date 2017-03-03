@@ -19,7 +19,7 @@ Con uDRAE-sdk podrás acceder fácilmente a la API del DRAE.
     1. [Obteniendo instancia de UDRAEInteractor](https://github.com/GrenderG/uDRAE-sdk#obteniendo-instancia-de-udraeinteractor)
     2. [Configurando UDRAEConfig](https://github.com/GrenderG/uDRAE-sdk#configurando-udrae-config)
     3. [Realizando una llamada a la API](https://github.com/GrenderG/uDRAE-sdk#realizando-una-llamada-a-la-api)
-4. [Cómo usar uDRAE-SDK](https://github.com/GrenderG/uDRAE-sdk#cómo-usar-udrae-sdk)
+4. [Cómo usar uDRAE-sdk](https://github.com/GrenderG/uDRAE-sdk#cómo-usar-udrae-sdk)
     1. [Añadiendo repositorio de jitpack](https://github.com/GrenderG/uDRAE-sdk#añadiendo-repositorio-de-jitpack)
     2. [Añadiendo depencencia mediante gradle](https://github.com/GrenderG/uDRAE-sdk#añadiendo-dependencia-mediante-gradle)
 5. [Información adicional](https://github.com/GrenderG/uDRAE-sdk#información-adicional)
@@ -65,7 +65,7 @@ Con uDRAE-sdk podrás acceder fácilmente a la API del DRAE.
 
 ---
 
-# Cómo usar uDRAE-SDK
+# Cómo usar uDRAE-sdk
 
 ### Añadiendo repositorio de jitpack
 Añade lo siguiente al `build.gradle` ubicado en la raíz, **no** el del módulo.
