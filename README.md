@@ -45,7 +45,7 @@ Si entráis en cada modelo podréis observar qué significa cada atributo.
 
 **Llamada `GET`:** `https://dle.rae.es/data/anagram?w={word}`
 
-**Descripción:** Esta llamada nos permite obtener una lista de palabras que son anagramas de la proporcionada.
+**Descripción:** Esta llamada nos permite obtener una lista de palabras que son [anagramas](https://es.wikipedia.org/wiki/Anagrama) de la proporcionada.
 
 **Respuesta `(word = amor)`:** 
 ```json
@@ -61,11 +61,13 @@ Si entráis en cada modelo podréis observar qué significa cada atributo.
 ```
 **Modelo usado:** [AnagramResponse](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/models/AnagramResponse.java)
 
-**Método para realizar la llamada:** [`getAnagrams(String word, Callback<AnagramResponse> anagramResponseCallback)`](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/UDRAEInteractor.java#L59-L61)
+**Método para realizar la llamada:** [`getAnagrams(String word, Callback<AnagramResponse> anagramResponseCallback)`](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/UDRAEInteractor.java#L60-L62)
 
 ## Comienza con
 
 **Llamada `GET`:** `https://dle.rae.es/data/search?w={wordFragment}&m=31&f=1&t=200`
+
+**Descripción:** Esta llamada nos permite obtener una lista de palabras que comienzan con los caracteres proporcionados.
 
 **Respuesta `(wordFragment = hol)`:**
 ```json
@@ -83,9 +85,33 @@ Si entráis en cada modelo podréis observar qué significa cada atributo.
 
 **Modelo usado:** [BaseResponse](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/models/BaseResponse.java)
 
-**Método para realizar la llamada:** [`getWordsStartingWith(String wordFragment, Callback<BaseResponse> startsWithResponseCallback)`](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/UDRAEInteractor.java#L63-L65)
+**Método para realizar la llamada:** [`getWordsStartingWith(String wordFragment, Callback<BaseResponse> startsWithResponseCallback)`](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/UDRAEInteractor.java#L64-L66)
 
 ## Contiene
+
+**Llamada `GET`:** `https://dle.rae.es/data/search?w={wordFragment}&m=33&f=1&t=200`
+
+**Descripción:** Esta llamada nos permite obtener una lista de palabras que contienen los caracteres proporcionados.
+
+**Respuesta `(wordFragment = aro)`:**
+```json
+{
+    "approx":0,
+    "res":[
+        {"header":"ácaro.", "id":"0IxSVOR", "grp":0},
+        {"header":"acaronar.", "id":"0IyzEHW", "grp":1},
+        {"header":"acharolado, da.", "id":"0QBXF9L", "grp":2},
+        {"header":"acharolar.", "id":"0QC3gFz", "grp":3},
+        {"header":"aerofaro.", "id":"0tpHjYd", "grp":4},
+        {"header":"afarolado, da.", "id":"0vj7Xt1", "grp":5},
+	...
+    ]
+}
+```
+
+**Modelo usado:** [BaseResponse](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/models/BaseResponse.java)
+
+**Método para realizar la llamada:** [getWordsContaining(`String wordFragment, Callback<BaseResponse> containsResponseCallback`)](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/UDRAEInteractor.java#L67-L69)
 
 ## Termina en
 
