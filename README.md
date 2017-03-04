@@ -21,7 +21,7 @@ Con uDRAE-sdk podrás acceder fácilmente a la API del DRAE.
     1. [Obteniendo instancia de UDRAEInteractor](https://github.com/GrenderG/uDRAE-sdk#obteniendo-instancia-de-udraeinteractor)
     2. [Configurando UDRAEConfig](https://github.com/GrenderG/uDRAE-sdk#configurando-udrae-config)
     3. [Realizando una llamada a la API](https://github.com/GrenderG/uDRAE-sdk#realizando-una-llamada-a-la-api)
-4. [Cómo usar uDRAE-sdk](https://github.com/GrenderG/uDRAE-sdk#cómo-usar-udrae-sdk)
+4. [Añadir uDRAE-sdk a tu proyecto](https://github.com/GrenderG/uDRAE-sdk#añadir-udrae-sdk-a-tu-proyecto)
     1. [Añadiendo repositorio de jitpack](https://github.com/GrenderG/uDRAE-sdk#añadiendo-repositorio-de-jitpack)
     2. [Añadiendo depencencia mediante gradle](https://github.com/GrenderG/uDRAE-sdk#añadiendo-dependencia-mediante-gradle)
 5. [Información adicional](https://github.com/GrenderG/uDRAE-sdk#información-adicional)
@@ -283,7 +283,7 @@ json({"header":"versus.","id":"bfyaXi1"})
 
 ---
 
-# Uso del SDK
+# Añadir uDRAE-sdk a tu proyecto
 
 Evidentemente necesitas proporcionar permisos de INTERNET a tu aplicación (puedes hacerlo en `AndroidManifest.xml`.
 
