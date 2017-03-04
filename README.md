@@ -26,7 +26,7 @@ Con uDRAE-sdk podrás acceder fácilmente a la API del DRAE.
     2. [Añadiendo depencencia mediante gradle](https://github.com/GrenderG/uDRAE-sdk#añadiendo-dependencia-mediante-gradle)
 5. [Información adicional](https://github.com/GrenderG/uDRAE-sdk#información-adicional)
     1. [Motivaciones](https://github.com/GrenderG/uDRAE-sdk#motivaciones)
-    2. [¿Existe alguna alternativa en estos momentos a la aplicación oficial del DRAE?](https://github.com/GrenderG/uDRAE-sdk#)
+    2. [¿Existe alguna alternativa en estos momentos a la aplicación oficial del DRAE?](https://github.com/GrenderG/uDRAE-sdk#existe-alguna-alternativa-en-estos-momentos-a-la-aplicación-oficial-del-drae)
     
 ------
 
@@ -283,6 +283,12 @@ json({"header":"versus.","id":"bfyaXi1"})
 ---
 
 # Uso del SDK
+
+Evidentemente necesitas proporcionar permisos de INTERNET a tu aplicación (puedes hacerlo en `AndroidManifest.xml`.
+
+```xml
+<uses-permission android:name="android.permission.INTERNET" />
+```
 
 ## Obteniendo instancia de UDRAEInteractor
 ```java
