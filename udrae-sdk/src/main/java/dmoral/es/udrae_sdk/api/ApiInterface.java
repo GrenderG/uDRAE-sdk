@@ -2,6 +2,7 @@ package dmoral.es.udrae_sdk.api;
 
 import java.util.ArrayList;
 
+import dmoral.es.udrae_sdk.api.models.AnagramResponse;
 import dmoral.es.udrae_sdk.api.models.BaseResponse;
 import dmoral.es.udrae_sdk.api.models.HeaderResponse;
 import dmoral.es.udrae_sdk.api.models.IdResponse;
@@ -31,7 +32,7 @@ import retrofit2.http.Query;
 
 interface ApiInterface {
     @GET(Constants.ANAGRAM_ENDPOINT)
-    Call<BaseResponse> getAnagrams(@Header("Authorization") String authorization, @Query("w") String word);
+    Call<AnagramResponse> getAnagrams(@Header("Authorization") String authorization, @Query("w") String word);
 
     @GET(Constants.STARTS_WITH_ENDPOINT)
     Call<BaseResponse> getWordsStartingWith(@Header("Authorization") String authorization, @Query("w") String wordFragment);

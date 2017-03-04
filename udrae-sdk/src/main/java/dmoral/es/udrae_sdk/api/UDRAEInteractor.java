@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import java.util.ArrayList;
 
 import dmoral.es.udrae_sdk.api.config.UDRAEConfig;
+import dmoral.es.udrae_sdk.api.models.AnagramResponse;
 import dmoral.es.udrae_sdk.api.models.BaseResponse;
 import dmoral.es.udrae_sdk.api.models.HeaderResponse;
 import dmoral.es.udrae_sdk.api.models.IdResponse;
@@ -56,7 +57,7 @@ public class UDRAEInteractor {
         this.context = context;
     }
 
-    public void getAnagrams(String word, Callback<BaseResponse> anagramResponseCallback) {
+    public void getAnagrams(String word, Callback<AnagramResponse> anagramResponseCallback) {
         apiInterface.getAnagrams(WebService.getBAHeader(), word).enqueue(anagramResponseCallback);
     }
 

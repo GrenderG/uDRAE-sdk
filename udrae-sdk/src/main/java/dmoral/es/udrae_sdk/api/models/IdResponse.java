@@ -20,5 +20,8 @@ import java.util.ArrayList;
  */
 
 public class IdResponse {
+    /**
+     * IDs que se encuentran en el resulado al realizar una búsqueda de una palabra
+     */
     private ArrayList<String> res;
 }

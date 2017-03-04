@@ -18,6 +18,9 @@ package dmoral.es.udrae_sdk.api.models;
  */
 
 public class HeaderResponse {
+    /**
+     * Cabecera que corresponde a una ID
+     */
     private String header;
 
     public String getHeader() {

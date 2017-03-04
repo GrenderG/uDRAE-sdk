@@ -19,7 +19,7 @@ import java.util.ArrayList;
  * along with uDRAE-SDK.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-public class BaseResponse {
+public class AnagramResponse {
     /**
      * Número de resultados que se aproximan a nuestra búsqueda, solo usado en algunos casos,
      * por ejemplo en búsquedas de definiciones
@@ -48,17 +48,25 @@ public class BaseResponse {
 
     public class Res {
         /**
-         * Cabecera que se muestra en la definición de la palabra
+         * Anagrama creado a partir de la palabra introducida
+         */
+        private String word;
+        /**
+         * Cabecera que se muestra en la definición del anagrama
          */
         private String header;
         /**
          * ID de la palabra (se usa para realizar búsquedas por ID, por ejemplo)
          */
         private String id;
-        /**
-         * En caso de haber varios resultados (indicado por 'approx') grupo al que pertenece la palabra
-         */
-        private int grp;
+
+        public String getWord() {
+            return word;
+        }
+
+        public void setWord(String word) {
+            this.word = word;
+        }
 
         public String getHeader() {
             return header;
@@ -75,14 +83,5 @@ public class BaseResponse {
         public void setId(String id) {
             this.id = id;
         }
-
-        public int getGrp() {
-            return grp;
-        }
-
-        public void setGrp(int grp) {
-            this.grp = grp;
-        }
     }
 }
-

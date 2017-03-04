@@ -18,7 +18,13 @@ package dmoral.es.udrae_sdk.api.models;
  */
 
 public class WOTDResponse {
+    /**
+     * Cabecera que corresponde a la palabra del día
+     */
     private String header;
+    /**
+     * ID de la palabra del día
+     */
     private String id;
 
     public String getHeader() {
