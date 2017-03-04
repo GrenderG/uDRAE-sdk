@@ -11,10 +11,12 @@ Con uDRAE-sdk podrás acceder fácilmente a la API del DRAE.
     4. [Termina en](https://github.com/GrenderG/uDRAE-sdk#termina-en)
     5. [Búsqueda exacta](https://github.com/GrenderG/uDRAE-sdk#búsqueda-exacta)
     6. [Búsqueda definición por ID](https://github.com/GrenderG/uDRAE-sdk#búsqueda-definicion-por-id)
-    7. [Búsqueda de palabras que contienen unos carácteres](https://github.com/GrenderG/uDRAE-sdk#búsqueda-de-palabras-que-contienen-unos-caracteres)
-    8. [Palabra aleatoria](https://github.com/GrenderG/uDRAE-sdk#palabra-aleatoria)
-    9. [Búsqueda de palabras](https://github.com/GrenderG/uDRAE-sdk#búsqueda-de-palabras)
-    10. [Palabra del día](https://github.com/GrenderG/uDRAE-sdk#palabra-del-día)
+    7. [Búsqueda de cabecera por ID](https://github.com/GrenderG/uDRAE-sdk#búsqueda-de-cabecera-por-id)
+    8. [Búsqueda de IDs encontradas en la búsqueda de una palabra](https://github.com/GrenderG/uDRAE-sdk#búsqueda-de-ids-encontradas-en-la-búsqueda-de-una-palabra)
+    9. [Búsqueda de palabras que contienen unos carácteres](https://github.com/GrenderG/uDRAE-sdk#búsqueda-de-palabras-que-contienen-unos-caracteres)
+    10. [Palabra aleatoria](https://github.com/GrenderG/uDRAE-sdk#palabra-aleatoria)
+    11. [Búsqueda de palabras](https://github.com/GrenderG/uDRAE-sdk#búsqueda-de-palabras)
+    12. [Palabra del día](https://github.com/GrenderG/uDRAE-sdk#palabra-del-día)
 3. [Uso del SDK](https://github.com/GrenderG/uDRAE-sdk#uso-del-sdk)
     1. [Obteniendo instancia de UDRAEInteractor](https://github.com/GrenderG/uDRAE-sdk#obteniendo-instancia-de-udraeinteractor)
     2. [Configurando UDRAEConfig](https://github.com/GrenderG/uDRAE-sdk#configurando-udrae-config)
@@ -176,6 +178,10 @@ Si entráis en cada modelo podréis observar qué significa cada atributo.
 **Modelo usado:** [String](https://developer.android.com/reference/java/lang/String.html) (devuelve el HTML con la definición)
 
 **Método para realizar la llamada:** [`getDefinitionById(String id, Callback<String> htmlDefinitionCallback)`](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/UDRAEInteractor.java#L79-L81)
+
+## Búsqueda de cabecera por ID
+
+## Búsqueda de IDs encontradas en la búsqueda de una palabra
 
 ## Búsqueda de palabras que contienen unos carácteres
 
