@@ -78,7 +78,7 @@ Si entráis en cada modelo podréis observar qué significa cada atributo.
         {"header":"holán.", "id":"KYujRuK", "grp":1},
         {"header":"holanda.", "id":"KYwHQ7M", "grp":2},
         {"header":"holandés, sa.", "id":"KYwyn6b", "grp":3},
-	...
+        ...
     ]
 }
 ```
@@ -104,7 +104,7 @@ Si entráis en cada modelo podréis observar qué significa cada atributo.
         {"header":"acharolar.", "id":"0QC3gFz", "grp":3},
         {"header":"aerofaro.", "id":"0tpHjYd", "grp":4},
         {"header":"afarolado, da.", "id":"0vj7Xt1", "grp":5},
-	...
+        ...
     ]
 }
 ```
@@ -115,9 +115,67 @@ Si entráis en cada modelo podréis observar qué significa cada atributo.
 
 ## Termina en
 
+**Llamada `GET`:** `https://dle.rae.es/data/search?w={wordFragment}&m=32&f=1&t=200`
+
+**Descripción:** Esta llamada nos permite obtener una lista de palabras terminadas con los caracteres proporcionados.
+
+**Respuesta `(wordFragment = otor)`:**
+```json
+{
+    "approx":0,
+    "res":[
+        {"header":"aeromotor.", "id":"0uNgCWY", "grp":0},
+        {"header":"automotor, ra.", "id":"4TjvnOL", "grp":1},
+        {"header":"bimotor.", "id":"5XG64Xm", "grp":2},
+        {"header":"botor.", "id":"5zsvMD4", "grp":3},
+        ...
+    ]
+}                                                                        
+```
+
+**Modelo usado:** [BaseResponse](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/models/BaseResponse.java)
+
+**Método para realizar la llamada:** [`getWordsEndingWith(String wordFragment, Callback<BaseResponse> endsWithResponseCallback)`](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/UDRAEInteractor.java#L71-L73)
+
 ## Búsqueda exacta
 
+**Llamada `GET`:** `https://dle.rae.es/data/search?w={word}&m=30`
+
+**Descripción:** 
+
+**Respuesta `(word = libertad)`:**
+```json
+{
+    "approx":0,
+    "res":[
+        {"header":"libertad.", "id":"NEeAr5C", "grp":0}
+    ]
+}
+```
+
+**Modelo usado:** [BaseResponse](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/models/BaseResponse.java)
+
+**Método para realizar la llamada:** [`getExactWord(String word, Callback<BaseResponse> exactResponseCallback)`](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/UDRAEInteractor.java#L75-L77)
+
 ## Buscar definición por ID
+
+**Llamada `GET`:** `https://dle.rae.es/data/fetch?id={id}`
+
+**Descripción:** 
+
+**Respuesta `(id = NEeAr5C)`:**
+```html
+<article id="NEeAr5C">
+<header class="f">libertad.</header>
+<p class="n2">Del <abbr title="latín">lat.</abbr> <em>libertas, -ātis.</em></p>
+<p class="j" id="Jb6hv1z">1. <abbr class="d" title="nombre femenino">f.</abbr> <mark data-id="HTxyZDZ|HTy5CnJ">Facultad</mark> <mark>natural</mark> <mark>que</mark> <mark>tiene</mark> <mark>el</mark> <mark>hombre</mark> <mark data-id="BtDkacL|BtFYznp">de</mark> <mark>obrar</mark> <mark data-id="BtDkacL|BtFYznp">de</mark> <mark data-id="b67JJSq|b6hEWeB|b6iKApr">una</mark> <mark>manera</mark> <mark>o</mark> <mark data-id="BtDkacL|BtFYznp">de</mark> <mark data-id="RLQQxGn">otra</mark>, <mark>y</mark> <mark data-id="BtDkacL|BtFYznp">de</mark> <mark>no</mark> <mark>obrar</mark>, <mark>por</mark> <mark data-id="ESraxkH|NWnohQu|NWofhZh">lo</mark> <mark>que</mark> <mark data-id="EIVnk2C|Xe5Brrm">es</mark> <mark>responsable</mark> <mark data-id="BtDkacL|BtFYznp">de</mark> <mark>sus</mark> <mark>actos</mark>.</p>
+<p class="j" id="Jb6kgMf">2. <abbr class="g" title="nombre femenino">f.</abbr> <mark data-id="GjqhajH|GnJiqdL">Estado</mark> <mark>o</mark> <mark>condición</mark> <mark data-id="BtDkacL|BtFYznp">de</mark> <mark>quien</mark> <mark>no</mark> <mark data-id="EIVnk2C|Xe5Brrm">es</mark> <mark>esclavo</mark>.</p>
+...
+```
+
+**Modelo usado:** [String](https://developer.android.com/reference/java/lang/String.html) (devuelve el HTML con la definición)
+
+**Método para realizar la llamada:** [`getDefinitionById(String id, Callback<String> htmlDefinitionCallback)`](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/UDRAEInteractor.java#L79-L81)
 
 ## Búsqueda de palabras que contienen unos carácteres
 
