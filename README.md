@@ -26,6 +26,7 @@ Con uDRAE-sdk podrás acceder fácilmente a la API del DRAE.
     2. [Añadiendo depencencia mediante gradle](https://github.com/GrenderG/uDRAE-sdk#añadiendo-dependencia-mediante-gradle)
 5. [Información adicional](https://github.com/GrenderG/uDRAE-sdk#información-adicional)
     1. [Motivaciones](https://github.com/GrenderG/uDRAE-sdk#motivaciones)
+    2. [¿Existe alguna alternativa en estos momentos a la aplicación oficial del DRAE?](https://github.com/GrenderG/uDRAE-sdk#)
     
 ------
 
@@ -361,4 +362,17 @@ dependencies {
 
 ## Motivaciones
 
+Personalmente pienso que la información que proporciona el DRAE (propiedad de la RAE) debería ser de dominio público para que cualquiera pudiera hacer uso de ella de la forma que quisiera (recordemos que la institución se financia también con dinero público) sin tener que encontrarse con la cantidad de licencias restrictivas que poseen las obras de la RAE (tan restrictivas que siendo estrictos ni los buscadores podrían indexar su contenido sin estar infringiendo su propiedad intelectual).
+
+Basándome en mi opinión sobre lo anteriormente expuesto, he considerado hacer pública y accesible la API que utiliza la aplicación de su diccionario para así permitir a todo el mundo tener el derecho de crear sus propias apps de diccionarios o que simplemente utilicen la información que proporciona el DRAE.
+
+## ¿Existe alguna alternativa en estos momentos a la aplicación oficial del DRAE?
+<table>
+	<tr>
+	<td><a href="https://freespanish.github.io/Diccionario/">Diccionario (por freespanish)</a></td>
+	<td>Aunque este diccionario no utiliza la API del DRAE, es totalmente funcional y hace uso del contenido original de la RAE.</td>
+	</tr>
+</table>
+
+¿Haces uso de la API o del DRAE y quieres aparecer aquí? Abre un `issue` o un `Pull Request` con tu aplicación añadida.
 ---
