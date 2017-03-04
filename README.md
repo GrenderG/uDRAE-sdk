@@ -47,7 +47,7 @@ Si entráis en cada modelo podréis observar qué significa cada atributo.
 
 **Llamada `GET`:** `https://dle.rae.es/data/anagram?w={word}`
 
-**Descripción:** Esta llamada nos permite obtener una lista de palabras que son [anagramas](https://es.wikipedia.org/wiki/Anagrama) de la proporcionada.
+**Descripción:** Esta llamada permite obtener una lista de palabras que son [anagramas](https://es.wikipedia.org/wiki/Anagrama) de la proporcionada.
 
 **Respuesta `(word = amor)`:** 
 ```json
@@ -69,7 +69,7 @@ Si entráis en cada modelo podréis observar qué significa cada atributo.
 
 **Llamada `GET`:** `https://dle.rae.es/data/search?w={wordFragment}&m=31&f=1&t=200`
 
-**Descripción:** Esta llamada nos permite obtener una lista de palabras que comienzan con los caracteres proporcionados.
+**Descripción:** Esta llamada permite obtener una lista de palabras que comienzan con los caracteres proporcionados.
 
 **Respuesta `(wordFragment = hol)`:**
 ```json
@@ -93,7 +93,7 @@ Si entráis en cada modelo podréis observar qué significa cada atributo.
 
 **Llamada `GET`:** `https://dle.rae.es/data/search?w={wordFragment}&m=33&f=1&t=200`
 
-**Descripción:** Esta llamada nos permite obtener una lista de palabras que contienen los caracteres proporcionados.
+**Descripción:** Esta llamada permite obtener una lista de palabras que contienen los caracteres proporcionados.
 
 **Respuesta `(wordFragment = aro)`:**
 ```json
@@ -119,7 +119,7 @@ Si entráis en cada modelo podréis observar qué significa cada atributo.
 
 **Llamada `GET`:** `https://dle.rae.es/data/search?w={wordFragment}&m=32&f=1&t=200`
 
-**Descripción:** Esta llamada nos permite obtener una lista de palabras terminadas con los caracteres proporcionados.
+**Descripción:** Esta llamada permite obtener una lista de palabras terminadas con los caracteres proporcionados.
 
 **Respuesta `(wordFragment = otor)`:**
 ```json
@@ -143,7 +143,7 @@ Si entráis en cada modelo podréis observar qué significa cada atributo.
 
 **Llamada `GET`:** `https://dle.rae.es/data/search?w={word}&m=30`
 
-**Descripción:** 
+**Descripción:** Esta llamada permite obtener la información de una palabra en concreto.
 
 **Respuesta `(word = libertad)`:**
 ```json
@@ -163,7 +163,7 @@ Si entráis en cada modelo podréis observar qué significa cada atributo.
 
 **Llamada `GET`:** `https://dle.rae.es/data/fetch?id={id}`
 
-**Descripción:** 
+**Descripción:** Esta llamada permite obtener la definición de la palabra representada por la ID proporcionada.
 
 **Respuesta `(id = NEeAr5C)`:**
 ```html
@@ -181,13 +181,88 @@ Si entráis en cada modelo podréis observar qué significa cada atributo.
 
 ## Búsqueda de cabecera por ID
 
+**Llamada `GET`:** `https://dle.rae.es/data/header?id={id}`
+
+**Descripción:** Esta llamada permite obtener la cabecera que hace referencia a la ID proporcionada.
+
+**Respuesta `(id = NEeAr5C)`:**
+```json
+{ "header":"libertad."}
+```
+
+**Modelo usado:** [HeaderResponse](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/models/HeaderResponse.java)
+
+**Método para realizar la llamada:** [`getHeaderById(String id, Callback<HeaderResponse> headerResponseCallback)`](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/UDRAEInteractor.java#L84-L86)
+
 ## Búsqueda de IDs encontradas en la búsqueda de una palabra
+
+**Llamada `GET`:** `https://dle.rae.es/data/ids?w={word}`
+
+**Descripción:** Esta llamada permite obtener las IDs de las palabras que se encuentran cuando realizamos la búsqueda de una palabra.
+
+**Respuesta `(word = hola)`:**
+```json
+{ "res" : ["KYtLWBc"] }
+```
+
+**Modelo usado:** [IdResponse](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/models/IdResponse.java)
+
+**Método para realizar la llamada:** [`getIdsMatchingWord(String word, Callback<IdResponse> idResponseCallback)`](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/UDRAEInteractor.java#L88-L90)
 
 ## Búsqueda de palabras que contienen unos carácteres
 
+**Llamada `GET`:** `https://dle.rae.es/data/keys?q={query}&callback=jsonp123`
+
+**Descripción:** Esta llamada permite obtener una lista de palabras que empiezan con los caracteres (query) introducidos. Es muy útil por ejemplo para crear una lista de palabras sugeridas mientras el usuario va introduciendo su búsqueda.
+
+**Respuesta `(query = hol)`:**
+```jsonp
+jsonp123(["hola","holán","holanda","holandés","holandesa","holandeta","holandilla","holco","holding","holear"])
+```
+
+**Modelo usado:** [ArrayList\<String\>](https://developer.android.com/reference/java/util/ArrayList.html)
+
+**Método para realizar la llamada:** [`getSomeMatchingWords(String word, Callback<ArrayList<String>> keysResponseCallback)`](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/UDRAEInteractor.java#L104-L106)
+
 ## Palabra aleatoria
 
+**Llamada `GET`:** `https://dle.rae.es/data/random`
+
+**Descripción:** Esta llamada devuelve la definición de una palabra aleatoria.
+
+**Respuesta:**
+```html
+<article id="NEeAr5C">
+<header class="f">libertad.</header>
+<p class="n2">Del <abbr title="latín">lat.</abbr> <em>libertas, -ātis.</em></p>
+<p class="j" id="Jb6hv1z">1. <abbr class="d" title="nombre femenino">f.</abbr> <mark data-id="HTxyZDZ|HTy5CnJ">Facultad</mark> <mark>natural</mark> <mark>que</mark> <mark>tiene</mark> <mark>el</mark> <mark>hombre</mark> <mark data-id="BtDkacL|BtFYznp">de</mark> <mark>obrar</mark> <mark data-id="BtDkacL|BtFYznp">de</mark> <mark data-id="b67JJSq|b6hEWeB|b6iKApr">una</mark> <mark>manera</mark> <mark>o</mark> <mark data-id="BtDkacL|BtFYznp">de</mark> <mark data-id="RLQQxGn">otra</mark>, <mark>y</mark> <mark data-id="BtDkacL|BtFYznp">de</mark> <mark>no</mark> <mark>obrar</mark>, <mark>por</mark> <mark data-id="ESraxkH|NWnohQu|NWofhZh">lo</mark> <mark>que</mark> <mark data-id="EIVnk2C|Xe5Brrm">es</mark> <mark>responsable</mark> <mark data-id="BtDkacL|BtFYznp">de</mark> <mark>sus</mark> <mark>actos</mark>.</p>
+<p class="j" id="Jb6kgMf">2. <abbr class="g" title="nombre femenino">f.</abbr> <mark data-id="GjqhajH|GnJiqdL">Estado</mark> <mark>o</mark> <mark>condición</mark> <mark data-id="BtDkacL|BtFYznp">de</mark> <mark>quien</mark> <mark>no</mark> <mark data-id="EIVnk2C|Xe5Brrm">es</mark> <mark>esclavo</mark>.</p>
+...
+```
+
+**Modelo usado:** [String](https://developer.android.com/reference/java/lang/String.html) (devuelve el HTML con la definición)
+
+**Método para realizar la llamada:** [`getRandomWord(Callback<String> htmlDefinitionCallback)`](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/UDRAEInteractor.java#L92-L94)
+
 ## Búsqueda de palabras
+
+**Llamada `GET`:** `https://dle.rae.es/data/search?w={word}`
+
+**Descripción:** Esta llamada devuelve una lista de palabras que coinciden con la búsqueda que se ha hecho. (Aquí es útil el parámetro `approx`, pues nos dice los resultados aproximados - 1 que existen (en caso de que los haya).
+
+**Respuesta `(word = amo)`:**
+```json
+{
+    "approx":0,
+    "res":[
+        {"header":"amar.", "id":"2E4Cede", "grp":0},
+        {"header":"amo, ma.", "id":"2ND9BMI", "grp":1}
+    ]
+}
+```
+**Modelo usado:** [BaseResponse](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/models/BaseResponse.java)
+
+**Método para realizar la llamada:** [`getWordSearchResults(String word, Callback<BaseResponse> wordSearchResultsCallback)`](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/UDRAEInteractor.java#L96-L98)
 
 ## Palabra del día (WOTD)
 
