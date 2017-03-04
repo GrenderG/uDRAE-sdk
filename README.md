@@ -29,11 +29,37 @@ Con uDRAE-sdk podrás acceder fácilmente a la API del DRAE.
 
 # Qué es y para qué sirve uDRAE-sdk
 
+uDRAE-sdk es un conjunto de métodos que permite acceder a la API del DRAE. 
+
+En sus entrañas se encuentra [Retrofit](http://square.github.io/retrofit/), por lo que si ya has trabajado con esta librería no tendrás ningún problema en entender el funcionamiento de uDRAE-sdk, puesto que utiliza sus [Callbacks](https://square.github.io/retrofit/2.x/retrofit/retrofit2/Callback.html).
+
 ---
 
 # Llamadas a la API y modelos de respuestas
 
+En este apartado se listan las llamadas realizadas a la API junto con su respuesta y el POJO utilizado en uDRAE-sdk. 
+
+Si entráis en cada modelo podréis observar qué significa cada atributo.
+
 ### Anagrama
+
+Llamada `GET`: `https://dle.rae.es/data/anagram?w={word}`
+
+Respuesta `(word = amor)`: 
+```json
+{
+  "approx":0,
+  "res":[
+    {"word":"Roma", "header":"Roma.", "id":"WdJDhRZ"},
+    {"word":"amor", "header":"amor.", "id":"2PGmlay"},
+    {"word":"armo", "header":"armar.", "id":"3aoPllh"},
+    ...
+  ]
+}
+```
+Modelo usado: [BaseResponse](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/models/BaseResponse.java)
+
+Método para realizar la llamada: [`getAnagrams(String word, Callback<BaseResponse> anagramResponseCallback)`](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/UDRAEInteractor.java#L59-L61)
 
 ### Comienza con
 
@@ -92,5 +118,7 @@ dependencies {
 ---
 
 # Información adicional
+
+### Motivaciones
 
 ---
