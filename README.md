@@ -284,8 +284,18 @@ json({"header":"versus.","id":"bfyaXi1"})
 # Uso del SDK
 
 ## Obteniendo instancia de UDRAEInteractor
-
+```java
+UDRAEInteractor udraeInteractor = new UDRAEInteractor(MainActivity.this, UDRAEConfig.getDefaultUDRAEConfig());
+```
 ## Configurando UDRAEConfig
+
+Podemos utilizar la configuración por defecto de `UDRAEConfig` como se está haciendo en el ejemplo de arriba. La configuración por defecto presenta estos valores:
+
+- Duración del cacheo de las llamadas: 30 días.
+- Duración del cacheo (para casos en los que no hay internet): 180 días.
+- Tamaño de la carpeta que almacenará el caché: 10_485_760 (10 MiB).
+- Timeout de la conexión: 15 segundos.
+- Nombre de la carpeta que almacenará el caché: udrae-cache
 
 ## Realizando una llamada a la API
 
