@@ -44,43 +44,23 @@ public class UDRAEConfig {
         return cacheDuration;
     }
 
-    public void setCacheDuration(int cacheDuration) {
-        this.cacheDuration = cacheDuration;
-    }
-
     public int getOfflineCacheDuration() {
         return offlineCacheDuration;
-    }
-
-    public void setOfflineCacheDuration(int offlineCacheDuration) {
-        this.offlineCacheDuration = offlineCacheDuration;
     }
 
     public int getCacheSize() {
         return cacheSize;
     }
 
-    public void setCacheSize(int cacheSize) {
-        this.cacheSize = cacheSize;
-    }
-
     public int getConnectTimeout() {
         return connectTimeout;
-    }
-
-    public void setConnectTimeout(int connectTimeout) {
-        this.connectTimeout = connectTimeout;
     }
 
     public String getCacheFolderName() {
         return cacheFolderName;
     }
 
-    public void setCacheFolderName(String cacheFolderName) {
-        this.cacheFolderName = cacheFolderName;
-    }
-
-    static class Builder {
+    public static class Builder {
         private int cacheDuration = 30; // 30 days
         private int offlineCacheDuration = 180; // 180 days
         private int cacheSize = 10_485_760; // 10 MiB
