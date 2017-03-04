@@ -248,7 +248,7 @@ jsonp123(["hola","holán","holanda","holandés","holandesa","holandeta","holandi
 
 **Llamada `GET`:** `https://dle.rae.es/data/search?w={word}`
 
-**Descripción:** Esta llamada devuelve una lista de palabras que coinciden con la búsqueda que se ha hecho. (Aquí es útil el parámetro `approx`, pues nos dice los resultados aproximados - 1 que existen (en caso de que los haya).
+**Descripción:** Esta llamada devuelve una lista de palabras que coinciden con la búsqueda que se ha hecho.
 
 **Respuesta `(word = amo)`:**
 ```json
@@ -265,6 +265,19 @@ jsonp123(["hola","holán","holanda","holandés","holandesa","holandeta","holandi
 **Método para realizar la llamada:** [`getWordSearchResults(String word, Callback<BaseResponse> wordSearchResultsCallback)`](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/UDRAEInteractor.java#L96-L98)
 
 ## Palabra del día (WOTD)
+
+**Llamada `GET`:** `https://dle.rae.es/data/wotd?callback=json`
+
+**Descripción:** Esta llamada devuelve información sobre la palabra del día (gestionada por los servidores del DRAE).
+
+**Respuesta:**
+```jsonp
+json({"header":"versus.","id":"bfyaXi1"})
+```
+
+**Modelo usado:** [WOTDResponse](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/models/WOTDResponse.java)
+
+**Método para realizar la llamada:** [`getWordOfTheDay(Callback<WOTDResponse> wotdResponseCallback)`](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/UDRAEInteractor.java#L100-L102)
 
 ---
 
