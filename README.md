@@ -27,12 +27,13 @@ Con uDRAE-sdk podrás acceder fácilmente a la API del DRAE.
 5. [Información adicional](https://github.com/GrenderG/uDRAE-sdk#información-adicional)
     1. [Motivaciones](https://github.com/GrenderG/uDRAE-sdk#motivaciones)
     2. [¿Existe alguna alternativa en estos momentos a la aplicación oficial del DRAE?](https://github.com/GrenderG/uDRAE-sdk#existe-alguna-alternativa-en-estos-momentos-a-la-aplicación-oficial-del-drae)
+    3. [Quiero usar la API del DRAE fuera de Android, ¿qué puedo hacer?](https://github.com/GrenderG/uDRAE-sdk#quiero-usar-la-api-del-drae-fuera-de-android-qué-puedo-hacer)
     
 ------
 
 # Qué es y para qué sirve uDRAE-sdk
 
-uDRAE-sdk es un conjunto de métodos que permite acceder a la API del DRAE. 
+uDRAE-sdk **(unofficial DRAE-sdk)** es un conjunto de métodos que permite acceder a la API del DRAE. 
 
 En sus entrañas se encuentra [Retrofit](http://square.github.io/retrofit/), por lo que si ya has trabajado con esta librería no tendrás ningún problema en entender el funcionamiento de uDRAE-sdk, puesto que utiliza sus [Callbacks](https://square.github.io/retrofit/2.x/retrofit/retrofit2/Callback.html).
 
@@ -373,13 +374,24 @@ Personalmente pienso que la información que proporciona el DRAE (propiedad de l
 Basándome en mi opinión sobre lo anteriormente expuesto, he considerado hacer pública y accesible la API que utiliza la aplicación de su diccionario para así permitir a todo el mundo tener el derecho de crear sus propias apps de diccionarios o que simplemente utilicen la información que proporciona el DRAE.
 
 ## ¿Existe alguna alternativa en estos momentos a la aplicación oficial del DRAE?
+
 <table>
 	<tr>
 	<td><a href="https://freespanish.github.io/Diccionario/">Diccionario (por freespanish)</a></td>
-	<td>Aunque este diccionario no utiliza la API del DRAE, es totalmente funcional y hace uso del contenido original de la RAE.</td>
+	<td>Aunque este diccionario no utiliza este SDK es totalmente funcional y hace uso del contenido original del DRAE.</td>
 	</tr>
 </table>
 
-¿Haces uso de la API o del DRAE y quieres aparecer aquí? Abre un `issue` o un `Pull Request` con tu aplicación añadida.
+¿Haces uso del SDK o de algún recurso del DRAE y quieres aparecer aquí? Abre un `issue` o un `Pull Request` con tu aplicación añadida.
+
+## Quiero usar la API del DRAE fuera de Android, ¿qué puedo hacer?
+
+Actualmente lo único que puedes hacer es hacer uso de una llamada `GET` que no está protegida por ningún certificado ni autenticación. 
+
+La llamada es la siguiente:
+
+`http://dle.rae.es/srv/search?w={word}`
+
+Siendo `{word}` la palabra a buscar. Esta llamada nos devolverá un HTML conteniendo el resultado de nuestra búsqueda.
 
 ---
