@@ -56,7 +56,7 @@ public class BaseResponse {
          */
         private String id;
         /**
-         * En caso de haber varios resultados (indicado por 'approx') grupo al que pertenece la palabra
+         * En caso de haber varios resultados, grupo al que pertenece la palabra
          */
         private int grp;
 
