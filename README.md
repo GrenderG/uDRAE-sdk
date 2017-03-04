@@ -283,7 +283,7 @@ json({"header":"versus.","id":"bfyaXi1"})
 
 ---
 
-# Añadir uDRAE-sdk a tu proyecto
+# Uso del SDK
 
 Evidentemente necesitas proporcionar permisos de INTERNET a tu aplicación (puedes hacerlo en `AndroidManifest.xml`.
 
@@ -339,7 +339,7 @@ En este ejemplo estamos obteniendo la ID del primer resultado que nos devuelve l
 
 ---
 
-# Cómo usar uDRAE-sdk
+# Añadir uDRAE-sdk a tu proyecto
 
 ## Añadiendo repositorio de jitpack
 Añade lo siguiente al `build.gradle` ubicado en la raíz, **no** el del módulo.
