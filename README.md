@@ -297,7 +297,37 @@ Podemos utilizar la configuración por defecto de `UDRAEConfig` como se está ha
 - Timeout de la conexión: 15 segundos.
 - Nombre de la carpeta que almacenará el caché: udrae-cache
 
+Si quieres personalizar la configuración, puedes hacerlo así:
+
+```java
+UDRAEConfig udraeConfig = new UDRAEConfig.Builder()
+                .setCacheSize(20 * 1024 * 1024)
+                .setCacheDuration(15)
+                .setOfflineCacheDuration(360)
+                .setCacheFolderName("custom-cache")
+                .apply();
+```
+
+Y posteriormente pasarle esa instancia de `UDRAEConfig` al constructor de `UDRAEInteractor`.
+
 ## Realizando una llamada a la API
+
+Por ejemplo, si queremos realizar una búsqueda exacta podemos hacerlo así:
+```java
+udraeInteractor.getExactWord("hola", new Callback<BaseResponse>() {
+            @Override
+            public void onResponse(Call<BaseResponse> call, Response<BaseResponse> response) {
+                Log.d("It works!", response.body().getRes().get(0).getHeader());
+            }
+
+            @Override
+            public void onFailure(Call<BaseResponse> call, Throwable t) {
+                Log.e("It doesn't work. :(", t.getMessage());
+            }
+        });
+```
+
+En este ejemplo estamos obteniendo la ID del primer resultado que nos devuelve la búsqueda de la palabra *hola*. Después podemos usar esa ID para realizar la búsqueda de la definición por ID.
 
 ---
 
@@ -321,7 +351,7 @@ Añade lo siguiente al `build.gradle` de tu módulo. (Asegúrate de que la versi
 ```gradle
 dependencies {
 	...
-	compile 'com.github.GrenderG:uDRAE-sdk:1.0.1'
+	compile 'com.github.GrenderG:uDRAE-sdk:1.0.2'
 }
 ```
 
