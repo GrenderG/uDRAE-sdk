@@ -375,4 +375,5 @@ Basándome en mi opinión sobre lo anteriormente expuesto, he considerado hacer 
 </table>
 
 ¿Haces uso de la API o del DRAE y quieres aparecer aquí? Abre un `issue` o un `Pull Request` con tu aplicación añadida.
+
 ---
