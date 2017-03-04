@@ -48,20 +48,40 @@ Llamada `GET`: `https://dle.rae.es/data/anagram?w={word}`
 Respuesta `(word = amor)`: 
 ```json
 {
-  "approx":0,
-  "res":[
-    {"word":"Roma", "header":"Roma.", "id":"WdJDhRZ"},
-    {"word":"amor", "header":"amor.", "id":"2PGmlay"},
-    {"word":"armo", "header":"armar.", "id":"3aoPllh"},
-    ...
-  ]
+    "approx":0,
+    "res":[
+        {"word":"Roma", "header":"Roma.", "id":"WdJDhRZ"},
+        {"word":"amor", "header":"amor.", "id":"2PGmlay"},
+        {"word":"armo", "header":"armar.", "id":"3aoPllh"},
+        ...
+    ]
 }
 ```
-Modelo usado: [BaseResponse](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/models/BaseResponse.java)
+Modelo usado: [AnagramResponse](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/models/AnagramResponse.java)
 
 Método para realizar la llamada: [`getAnagrams(String word, Callback<BaseResponse> anagramResponseCallback)`](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/UDRAEInteractor.java#L59-L61)
 
 ### Comienza con
+
+Llamada `GET`: `https://dle.rae.es/data/search?w={wordFragment}&m=31&f=1&t=200`
+
+Respuesta `(wordFragment = hol)`:
+```json
+{
+    "approx":0,
+    "res":[
+        {"header":"hola.", "id":"KYtLWBc", "grp":0},
+        {"header":"holán.", "id":"KYujRuK", "grp":1},
+        {"header":"holanda.", "id":"KYwHQ7M", "grp":2},
+        {"header":"holandés, sa.", "id":"KYwyn6b", "grp":3},
+	...
+    ]
+}
+```
+
+Modelo usado: [BaseResponse](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/models/BaseResponse.java)
+
+Método para realizar la llamada: [`getWordsStartingWith(String wordFragment, Callback<BaseResponse> startsWithResponseCallback)`](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/UDRAEInteractor.java#L63-L65)
 
 ### Contiene
 
