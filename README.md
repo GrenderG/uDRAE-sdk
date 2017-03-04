@@ -41,7 +41,7 @@ En este apartado se listan las llamadas realizadas a la API junto con su respues
 
 Si entráis en cada modelo podréis observar qué significa cada atributo.
 
-### Anagrama
+## Anagrama
 
 **Llamada `GET`:** `https://dle.rae.es/data/anagram?w={word}`
 
@@ -63,7 +63,7 @@ Si entráis en cada modelo podréis observar qué significa cada atributo.
 
 **Método para realizar la llamada:** [`getAnagrams(String word, Callback<AnagramResponse> anagramResponseCallback)`](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/UDRAEInteractor.java#L59-L61)
 
-### Comienza con
+## Comienza con
 
 **Llamada `GET`:** `https://dle.rae.es/data/search?w={wordFragment}&m=31&f=1&t=200`
 
@@ -85,37 +85,37 @@ Si entráis en cada modelo podréis observar qué significa cada atributo.
 
 **Método para realizar la llamada:** [`getWordsStartingWith(String wordFragment, Callback<BaseResponse> startsWithResponseCallback)`](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/UDRAEInteractor.java#L63-L65)
 
-### Contiene
+## Contiene
 
-### Termina en
+## Termina en
 
-### Búsqueda exacta
+## Búsqueda exacta
 
-### Buscar definición por ID
+## Buscar definición por ID
 
-### Búsqueda de palabras que contienen unos carácteres
+## Búsqueda de palabras que contienen unos carácteres
 
-### Palabra aleatoria
+## Palabra aleatoria
 
-### Búsqueda de palabras
+## Búsqueda de palabras
 
-### Palabra del día (WOTD)
+## Palabra del día (WOTD)
 
 ---
 
 # Uso del SDK
 
-### Obteniendo instancia de UDRAEInteractor
+## Obteniendo instancia de UDRAEInteractor
 
-### Configurando UDRAEConfig
+## Configurando UDRAEConfig
 
-### Realizando una llamada a la API
+## Realizando una llamada a la API
 
 ---
 
 # Cómo usar uDRAE-sdk
 
-### Añadiendo repositorio de jitpack
+## Añadiendo repositorio de jitpack
 Añade lo siguiente al `build.gradle` ubicado en la raíz, **no** el del módulo.
 
 ```gradle
@@ -127,13 +127,13 @@ allprojects {
 }
 ```
 
-### Añadiendo dependencia mediante gradle
+## Añadiendo dependencia mediante gradle
 Añade lo siguiente al `build.gradle` de tu módulo. (Asegúrate de que la versión sea la misma que la del distintivo de arriba)
 
 ```gradle
 dependencies {
 	...
-	compile 'com.github.GrenderG:uDRAE-sdk:1.0.0'
+	compile 'com.github.GrenderG:uDRAE-sdk:1.0.1'
 }
 ```
 
@@ -141,6 +141,6 @@ dependencies {
 
 # Información adicional
 
-### Motivaciones
+## Motivaciones
 
 ---
