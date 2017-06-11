@@ -179,7 +179,7 @@ Si entráis en cada modelo podréis observar qué significa cada atributo.
 
 **Modelo usado:** [String](https://developer.android.com/reference/java/lang/String.html) (devuelve el HTML con la definición)
 
-**Método para realizar la llamada:** [`getDefinitionById(String id, Callback<String> htmlDefinitionCallback)`](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/UDRAEInteractor.java#L79-L81)
+**Método para realizar la llamada:** [`getDefinitionById(String id, Callback<String> htmlDefinitionCallback)`](https://github.com/GrenderG/uDRAE-sdk/blob/master/udrae-sdk/src/main/java/dmoral/es/udrae_sdk/api/UDRAEInteractor.java#L80-L82)
 
 ## Búsqueda de cabecera por ID
 
