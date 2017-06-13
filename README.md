@@ -380,6 +380,10 @@ Basándome en mi opinión sobre lo anteriormente expuesto, he considerado hacer 
 	<td><a href="https://freespanish.github.io/Diccionario/">Diccionario (por freespanish)</a></td>
 	<td>Aunque este diccionario no utiliza este SDK es totalmente funcional y hace uso del contenido original del DRAE.</td>
 	</tr>
+	<tr>
+	<td><a href="https://github.com/angelcarmona/dle-rae">dle-rae</a></td>
+	<td>Consulta el DRAE desde tu terminal con este software hecho en Python.</td>
+	</tr>
 </table>
 
 ¿Haces uso del SDK o de algún recurso del DRAE y quieres aparecer aquí? Abre un `issue` o un `Pull Request` con tu aplicación añadida.
