@@ -18,6 +18,7 @@ package dmoral.es.udrae_sdk.api.gson_converters;
  */
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
@@ -35,7 +36,7 @@ public final class JsonpGsonConverterFactory extends Converter.Factory {
     }
 
     public static JsonpGsonConverterFactory create() {
-        return create(new Gson());
+        return create(new GsonBuilder().setLenient().create());
     }
 
     public static JsonpGsonConverterFactory create(Gson gson) {
