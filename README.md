@@ -10,7 +10,7 @@ Con uDRAE-sdk podrás acceder fácilmente a la API del DRAE.
     3. [Contiene](https://github.com/GrenderG/uDRAE-sdk#contiene)
     4. [Termina en](https://github.com/GrenderG/uDRAE-sdk#termina-en)
     5. [Búsqueda exacta](https://github.com/GrenderG/uDRAE-sdk#búsqueda-exacta)
-    6. [Búsqueda definición por ID](https://github.com/GrenderG/uDRAE-sdk#búsqueda-definición-por-id)
+    6. [Búsqueda definición por ID](https://github.com/GrenderG/uDRAE-sdk#buscar-definición-por-id)
     7. [Búsqueda de cabecera por ID](https://github.com/GrenderG/uDRAE-sdk#búsqueda-de-cabecera-por-id)
     8. [Búsqueda de IDs encontradas en la búsqueda de una palabra](https://github.com/GrenderG/uDRAE-sdk#búsqueda-de-ids-encontradas-en-la-búsqueda-de-una-palabra)
     9. [Búsqueda de palabras que contienen unos carácteres](https://github.com/GrenderG/uDRAE-sdk#búsqueda-de-palabras-que-contienen-unos-caracteres)
