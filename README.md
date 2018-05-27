@@ -359,7 +359,7 @@ Añade lo siguiente al `build.gradle` de tu módulo. (Asegúrate de que la versi
 ```gradle
 dependencies {
 	...
-	compile 'com.github.GrenderG:uDRAE-sdk:1.0.2'
+	compile 'com.github.GrenderG:uDRAE-sdk:1.0.4'
 }
 ```
 
