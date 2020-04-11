@@ -1,3 +1,5 @@
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R6R21LO82)
+
 [![](https://jitpack.io/v/GrenderG/uDRAE-sdk.svg)](https://jitpack.io/#GrenderG/uDRAE-sdk)
 # uDRAE-sdk
 Con uDRAE-sdk podrás acceder fácilmente a la API del DRAE.
